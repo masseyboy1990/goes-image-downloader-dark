@@ -11,7 +11,7 @@ then
 	#rename old image and update background path
 	mv /home/jackson/Projects/goes-image-downloader/latest.jpg /home/jackson/Projects/goes-image-downloader/former.jpg
 
-	gsettings set org.gnome.desktop.background picture-uri file:////home/jackson/Projects/goes-image-downloader/former.jpg
+	gsettings set org.gnome.desktop.background picture-uri-dark file:////home/jackson/Projects/goes-image-downloader/former.jpg
 
 	#download image from https://www.star.nesdis.noaa.gov/GOES/fulldisk_band.php?sat=G16&band=GEOCOLOR&length=12
 	wget -nd -A.jpg https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/latest.jpg -O /home/jackson/Projects/goes-image-downloader/latest_unformatted.jpg
@@ -23,7 +23,7 @@ then
 	rm /home/jackson/Projects/goes-image-downloader/latest_unformatted.jpg
 
 	#set new image as background
-	gsettings set org.gnome.desktop.background picture-uri file:////home/jackson/Projects/goes-image-downloader/latest.jpg
+	gsettings set org.gnome.desktop.background picture-uri-dark file:////home/jackson/Projects/goes-image-downloader/latest.jpg
 
 	#delete former image
 	rm /home/jackson/Projects/goes-image-downloader/former.jpg
